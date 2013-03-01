@@ -5,4 +5,5 @@ echo "restarting Node.JS app"
 npm install
 npm test
 
+# how can we skip this?
 /opt/ruby/bin/foreman start
