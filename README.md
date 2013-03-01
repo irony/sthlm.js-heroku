@@ -12,31 +12,31 @@ Set up all depenencies with chef. Create your projects deployable from start.
 
 ## Demo heroku
  
-´ heroku create
-´ git init
-´ express
-´ node app.js
+  heroku create
+  git init
+  express
+  node app.js
 
 Edit app.js and make it listen to the local port 3000 if it isn't already set by environment
 
-´ app.listen(process.env.PORT || 3000);
+  app.listen(process.env.PORT || 3000);
 
 Test your app in a browser http://localhost:3000
 
 Add a Procfile
 
-´ touch Procfile
+  touch Procfile
 
 Specify how your app is going to be started
 
-´ web: node app.js
+  web: node app.js
 
 Finally push this to Heroku and watch the results
 
-´ git add .
-´ git commit -am "Initial commit"
-´ git push heroku
-´ heroku open
+  git add .
+  git commit -am "Initial commit"
+  git push heroku
+  heroku open
 
 
 This is perfect for getting your app "up there" as soon as possible. But there are a few things you should know, Websockets are not supported (yet) and if you want to use SPDY or other direct ways of communicating you are out of luck. Also the big advantage with node is it's resource free way of handling multiple connections so we don't want too much things in the way of our app. Let's go in to the SSH world ;)
