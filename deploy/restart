@@ -5,4 +5,4 @@ echo "restarting Node.JS app"
 npm install
 npm test
 
-foreman start
+/opt/ruby/bin/foreman start
