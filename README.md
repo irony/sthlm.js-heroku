@@ -47,11 +47,20 @@ So how do we get a Heroku-style deployment scenario without Heroku to our own se
 Set up heroku-vagrant
 ===================
 
-    vagrant init heroku    
+    vagrant init 
 
-## Change machine settings and apply a local or global ip-adress in the Vagrantfile
+## Change machine settings and apply a local or global ip-adress in the Vagrantfile. Also add these lines to get a heroku-style linux:
+
+    Vagrant::Config.run do |config|
+      config.vm.box = "heroku"
+      config.vm.box_url = "http://dl.dropbox.com/u/1906634/heroku.box"
+    end
+
+And run vagrant up. The box will be downloaded and imported for you.
 
     vagrant up     
+
+    
 
 ## Set up SSH keys
 
@@ -59,6 +68,8 @@ Set up heroku-vagrant
     git remote add origin vagrant@<server IP>:/home/vagrant/sthlm.js     
 
 ## Demo git-deploy
+
+
 
     gem install git-deploy     
     git deploy setup     
@@ -71,6 +82,10 @@ Set up heroku-vagrant
     npm install    
     npm test     
     /opt/ruby/bin/foreman start    
+
+Now you have your own heroku style cloud hosting sitting on your computer. Ready to use whenever you want to test your code. Just push with:
+
+    git deploy
 
 
 
