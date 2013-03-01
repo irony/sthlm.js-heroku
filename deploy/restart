@@ -1,0 +1,8 @@
+#!/bin/sh
+touch tmp/restart.txt
+echo "restarting Node.JS app"
+
+npm install
+npm test
+
+foreman start
