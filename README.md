@@ -47,30 +47,30 @@ So how do we get a Heroku-style deployment scenario without Heroku to our own se
 Set up heroku-vagrant
 ===================
 
-     vagrant init heroku    
+    vagrant init heroku    
 
 ## Change machine settings and apply a local or global ip-adress in the Vagrantfile
 
-     vagrant up     
+    vagrant up     
 
 ## Set up SSH keys
 
-     ssh vagrant@<server IP> "cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_rsa.pub    
-     git remote add origin vagrant@<server IP>:/home/vagrant/sthlm.js     
+    ssh vagrant@<server IP> "cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_rsa.pub    
+    git remote add origin vagrant@<server IP>:/home/vagrant/sthlm.js     
 
 ## Demo git-deploy
 
-     gem install git-deploy     
-     git deploy setup     
-     git deploy init    
+    gem install git-deploy     
+    git deploy setup     
+    git deploy init    
 
 ## Edit deploy script in /deploy/restart
 
-´ touch tmp/restart.txt     
-     echo "restarting Node.JS app" 
-     npm install    
-     npm test     
-     /opt/ruby/bin/foreman start    
+    touch tmp/restart.txt     
+    echo "restarting Node.JS app" 
+    npm install    
+    npm test     
+    /opt/ruby/bin/foreman start    
 
 
 
