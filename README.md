@@ -49,7 +49,9 @@ Set up heroku-vagrant
 
     vagrant init 
 
-## Change machine settings and apply a local or global ip-adress in the Vagrantfile. Also add these lines to get a heroku-style linux:
+## Change machine settings (choose local ip) and specify which OS you want to use. 
+
+The following box is preconfigured to match the specifications on Heroku as much as possible:
 
     Vagrant::Config.run do |config|
       config.vm.box = "heroku"
@@ -60,7 +62,7 @@ And run vagrant up. The box will be downloaded and imported for you.
 
     vagrant up     
 
-    
+
 
 ## Set up SSH keys
 
@@ -85,7 +87,9 @@ And run vagrant up. The box will be downloaded and imported for you.
 
 Now you have your own heroku style cloud hosting sitting on your computer. Ready to use whenever you want to test your code. Just push with:
 
-    git deploy
+    git push
+
+And if you surf to the http://ip-adress:5000 you will see your express web
 
 
 
