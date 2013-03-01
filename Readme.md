@@ -1,6 +1,6 @@
 Heroku style Vagrant deployment demo for STHLM.js
 =================================================
-
+ 
 This is the demo by Christian Landgren, Iteam for STHLM.js in May 2013
 
 ## About deployment / devOps
